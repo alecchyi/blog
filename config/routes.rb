@@ -1,4 +1,6 @@
 MyBlog::Application.routes.draw do
+  get "abouts/index"
+
   resources :resources
 
 

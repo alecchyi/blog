@@ -10,32 +10,27 @@
       </ul>
     </div>
   <% end %>
-
+    <script type="text/javascript">
+        CKEDITOR.replace("article_content");
+    </script>
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label :title, "标题：" %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :subtitle %><br />
+    <%= f.label :subtitle,"副标题：" %>
     <%= f.text_field :subtitle %>
   </div>
   <div class="field">
-    <%= f.label :summary %><br />
-    <%= f.text_field :summary %>
+    <%= f.label :summary, "摘要：" %>
+    <%= f.text_area :summary, :cols => 70, :rows => 5 %>
   </div>
   <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_field :content %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br />
-    <%= f.number_field :status %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    <%= f.label :content, "内容：" %>
+    <%= f.text_area :content, :cols => 70, :rows => 20, :class => "ckeditor" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "提交" %>
   </div>
+
 <% end %>

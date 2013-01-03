@@ -8,6 +8,7 @@
   float: left;
   height: 100%;
   border: 1px solid #0033cc;
+  overflow: hidden;
 }
 .container_right{
   background: #ffffdd;
@@ -27,6 +28,8 @@
   position: relative;
   margin-top: 20px;
   min-height: 600px;
+  height: auto;
+  overflow: hidden;
 }
 
 .foot{
@@ -61,5 +64,5 @@
 .raised .boxcontent{display:block;background:#ccc;border-left:1px solid #fff;border-right:1px solid #999;
   height: 100%;padding: 5px;}
 .raised .container{display:block;background:#ccc;border-left:1px solid #fff;border-right:1px solid #999;
-  min-height: 600px;padding: 5px;}
+  min-height: 600px;padding: 5px;height: auto;overflow: hidden;}
 

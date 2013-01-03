@@ -40,6 +40,8 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
+    params[:article]["status"] = 0
+    params[:article]["user_id"] = 1
     @article = Article.new(params[:article])
 
     respond_to do |format|
