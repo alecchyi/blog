@@ -1,6 +1,4 @@
 MyBlog::Application.routes.draw do
-
-
   resources :resources
 
 
@@ -15,6 +13,7 @@ MyBlog::Application.routes.draw do
   resources :blogs
   resources :comments
   resources :searches
+  resources :abouts
 
 
   # The priority is based upon order of creation:
