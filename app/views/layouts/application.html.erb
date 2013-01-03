@@ -7,8 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render "shared/head_nav" %>
+  <div class="wrap_container raised">
+    <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+    <div class="container">
+      <div class="container_left">
+        <%= yield %>
+      </div>
+      <div class="container_right">
+         <%= render "shared/right" %>
+      </div>
+    </div>
+    <b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b>
+  </div>
 
-<%= yield %>
-
+   <%= render "shared/foot" %>
 </body>
 </html>

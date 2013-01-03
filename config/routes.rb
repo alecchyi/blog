@@ -1,4 +1,6 @@
 MyBlog::Application.routes.draw do
+
+
   resources :resources
 
 
@@ -10,6 +12,9 @@ MyBlog::Application.routes.draw do
 
   resources :categories
   resources :users
+  resources :blogs
+  resources :comments
+  resources :searches
 
 
   # The priority is based upon order of creation:
@@ -53,11 +58,7 @@ MyBlog::Application.routes.draw do
   #   end
 
   # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
