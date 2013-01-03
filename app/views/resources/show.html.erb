@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Obj:</b>
+  <%= @resource.obj_id %>
+</p>
+
+<p>
+  <b>Obj type:</b>
+  <%= @resource.obj_type %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @resource.status %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @resource.title %>
+</p>
+
+<p>
+  <b>Summary:</b>
+  <%= @resource.summary %>
+</p>
+
+<p>
+  <b>Attatch file name:</b>
+  <%= @resource.attatch_file_name %>
+</p>
+
+<p>
+  <b>Attatch file size:</b>
+  <%= @resource.attatch_file_size %>
+</p>
+
+<p>
+  <b>Attatch content type:</b>
+  <%= @resource.attatch_content_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_resource_path(@resource) %> |
+<%= link_to 'Back', resources_path %>

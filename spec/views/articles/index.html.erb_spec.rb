@@ -1,0 +1,35 @@
+require 'spec_helper'
+
+describe "articles/index" do
+  before(:each) do
+    assign(:articles, [
+      stub_model(Article,
+        :title => "Title",
+        :subtitle => "Subtitle",
+        :summary => "Summary",
+        :content => "Content",
+        :status => 1,
+        :user_id => 2
+      ),
+      stub_model(Article,
+        :title => "Title",
+        :subtitle => "Subtitle",
+        :summary => "Summary",
+        :content => "Content",
+        :status => 1,
+        :user_id => 2
+      )
+    ])
+  end
+
+  it "renders a list of articles" do
+    render
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    assert_select "tr>td", :text => "Title".to_s, :count => 2
+    assert_select "tr>td", :text => "Subtitle".to_s, :count => 2
+    assert_select "tr>td", :text => "Summary".to_s, :count => 2
+    assert_select "tr>td", :text => "Content".to_s, :count => 2
+    assert_select "tr>td", :text => 1.to_s, :count => 2
+    assert_select "tr>td", :text => 2.to_s, :count => 2
+  end
+end

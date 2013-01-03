@@ -1,0 +1,31 @@
+<%#= stylesheet_link_tag "jquery.treeview" %>
+<%#= javascript_include_tag "jquery.treeview" %>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#browser").treeview({
+            toggle: function() {
+                console.log("%s was toggled.", $(this).find(">span").text());
+            }
+        });
+    });
+</script>
+
+<ul id="browser" class="">
+  <li class=""><span>所有分类</span>
+    <ul>
+      <% Category.all_categories_by_group.each do |c| %>
+      <li class="<% if c["children"].size >0 %>closed<% end %>"><span id="folder_<%= c["id"] %>"><%= c["name"] %></span>
+        <% if c["children"].size >0 %>
+            <ul>
+              <% c["children"].each do |child| %>
+                <li><span id="file_<%= c["id"] %>_<%= child.id %>"><%= child.name %></span>&nbsp;&nbsp;<%= link_to '修改', edit_category_path(child) %>
+                &nbsp;<%= link_to '删除', child, method: :delete, data: { confirm: '确定删除吗?' } %>
+                </li>
+              <% end %>
+            </ul>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </li>
+</ul>

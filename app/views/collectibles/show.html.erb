@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @collectible.title %>
+</p>
+
+<p>
+  <b>Obj url:</b>
+  <%= @collectible.obj_url %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @collectible.description %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @collectible.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_collectible_path(@collectible) %> |
+<%= link_to 'Back', collectibles_path %>

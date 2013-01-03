@@ -1,0 +1,29 @@
+<h1>Listing collectibles</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Obj url</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @collectibles.each do |collectible| %>
+  <tr>
+    <td><%= collectible.title %></td>
+    <td><%= collectible.obj_url %></td>
+    <td><%= collectible.description %></td>
+    <td><%= collectible.status %></td>
+    <td><%= link_to 'Show', collectible %></td>
+    <td><%= link_to 'Edit', edit_collectible_path(collectible) %></td>
+    <td><%= link_to 'Destroy', collectible, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Collectible', new_collectible_path %>
