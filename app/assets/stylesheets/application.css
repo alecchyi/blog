@@ -11,3 +11,16 @@
  *= require_self
  *= require_tree .
  */
+
+ .flash_info{
+ 	clear: both;
+ 	width: 1000px;
+ 	min-height: 30px;
+ 	border: 1px solid green;
+ 	text-align: center;
+ }
+
+ .flash_info, .notice{
+ 	background: #efefef;
+ 	border: 1px dotted red;
+ }

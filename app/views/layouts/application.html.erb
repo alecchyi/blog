@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MyBlog</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title><%= blog_title %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <%= render "shared/head_nav" %>
+  <%= render "shared/flash_info" %>
   <div class="wrap_container raised">
     <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
     <div class="container">

@@ -80,4 +80,9 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def save_info
+    puts "---------",params[:name],params[:pwd]
+    render :xml => {:name => params[:name], :pwd => params[:pwd]}.to_xml
+  end
 end
