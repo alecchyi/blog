@@ -1,0 +1,9 @@
+<% if flash[:notice] %>
+<div class="flash_info notice"><%= flash[:notice] %><% flash[:notice] = nil %></div>
+<% elsif flash[:message] %>
+<div class="flash_info message"><%= flash[:message] %><% flash[:message] = nil %></div>
+<% elsif flash[:error] %>
+<div class="flash_info error"><%= flash[:error] %><% flash[:error] = nil %></div>
+<% elsif flash[:warn] %>
+<div class="flash_info warn"><%= flash[:warn] %><% flash[:warn] = nil %></div>
+<% end %>
